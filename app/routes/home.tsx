@@ -28,8 +28,8 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <Navbar />
       <ScrollSmoothProvider>
-        <Navbar />
         <HeroSection />
         <AboutSection />
         <ServicesSection />
