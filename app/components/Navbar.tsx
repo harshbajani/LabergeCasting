@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { navItems } from "~/constants";
+import { useTranslation } from "react-i18next";
+import LanguageToggle from "./LanguageToggle";
 
 interface NavbarProps {
   className?: string;
@@ -9,8 +10,18 @@ interface NavbarProps {
 export default function Navbar({
   className = "",
 }: NavbarProps): React.JSX.Element {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+
+  const navItems = [
+    { id: "home", label: t("nav.home") },
+    { id: "about", label: t("nav.about") },
+    { id: "services", label: t("nav.services") },
+    { id: "portfolio", label: t("nav.portfolio") },
+    { id: "talent", label: t("nav.talent") },
+    { id: "contact", label: t("nav.contact") },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,6 +77,9 @@ export default function Navbar({
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-stone-800 transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
+            
+            {/* Language Toggle */}
+            <LanguageToggle />
           </div>
 
           {/* Mobile Menu Button */}

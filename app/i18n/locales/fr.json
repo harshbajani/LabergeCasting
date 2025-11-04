@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "talent": "Talents",
+    "contact": "Contact"
+  },
+  "hero": {
+    "company": "LABERGE CASTING",
+    "title": "Élever les Talents à Travers l'Art Raffiné",
+    "subtitle": "Découvrez l'excellence en casting avec Laberge Casting",
+    "description": "Nous élevons les talents à travers l'art raffiné et des solutions de casting sophistiquées."
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "description": "Chez Laberge Casting, nous croyons au pouvoir du talent exceptionnel et de l'art raffiné. Notre mission est de connecter des individus extraordinaires avec des opportunités qui mettent en valeur leurs capacités uniques."
+  },
+  "services": {
+    "title": "Nos Services",
+    "description": "Nous offrons des services de casting complets adaptés aux besoins diversifiés de nos clients et talents."
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Explorez notre collection de projets de casting réussis et de collaborations."
+  },
+  "talent": {
+    "title": "Talents",
+    "description": "Rencontrez les individus exceptionnels qui composent notre roster de talents diversifié."
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "description": "Contactez notre équipe pour discuter de vos besoins en casting ou pour rejoindre notre roster de talents."
+  },
+  "language": {
+    "english": "English",
+    "french": "Français"
+  }
+}

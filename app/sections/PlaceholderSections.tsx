@@ -1,14 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function AboutSection(): React.JSX.Element {
+  const { t } = useTranslation();
+  
   return (
     <section id="about" className="min-h-screen bg-stone-50 flex items-center justify-center">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-6xl font-display font-light tracking-wide text-stone-800 mb-8">
-          About Laberge Casting
+          {t("about.title")}
         </h2>
         <p className="text-lg text-stone-600 font-sans font-light leading-relaxed">
-          Excellence in casting through refined artistry and sophisticated talent management.
+          {t("about.description")}
         </p>
       </div>
     </section>
@@ -16,14 +19,16 @@ export function AboutSection(): React.JSX.Element {
 }
 
 export function ServicesSection(): React.JSX.Element {
+  const { t } = useTranslation();
+  
   return (
     <section id="services" className="min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-6xl font-display font-light tracking-wide text-stone-800 mb-8">
-          Our Services
+          {t("services.title")}
         </h2>
         <p className="text-lg text-stone-600 font-sans font-light leading-relaxed">
-          Comprehensive casting solutions tailored to your creative vision.
+          {t("services.description")}
         </p>
       </div>
     </section>
@@ -31,14 +36,16 @@ export function ServicesSection(): React.JSX.Element {
 }
 
 export function PortfolioSection(): React.JSX.Element {
+  const { t } = useTranslation();
+  
   return (
     <section id="portfolio" className="min-h-screen bg-stone-100 flex items-center justify-center">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-6xl font-display font-light tracking-wide text-stone-800 mb-8">
-          Portfolio
+          {t("portfolio.title")}
         </h2>
         <p className="text-lg text-stone-600 font-sans font-light leading-relaxed">
-          Showcasing our finest work and successful casting projects.
+          {t("portfolio.description")}
         </p>
       </div>
     </section>
@@ -46,14 +53,16 @@ export function PortfolioSection(): React.JSX.Element {
 }
 
 export function TalentSection(): React.JSX.Element {
+  const { t } = useTranslation();
+  
   return (
     <section id="talent" className="min-h-screen bg-stone-50 flex items-center justify-center">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-6xl font-display font-light tracking-wide text-stone-800 mb-8">
-          Talent
+          {t("talent.title")}
         </h2>
         <p className="text-lg text-stone-600 font-sans font-light leading-relaxed">
-          Discover our exceptional roster of talented individuals.
+          {t("talent.description")}
         </p>
       </div>
     </section>
@@ -61,14 +70,16 @@ export function TalentSection(): React.JSX.Element {
 }
 
 export function ContactSection(): React.JSX.Element {
+  const { t } = useTranslation();
+  
   return (
     <section id="contact" className="min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-6xl font-display font-light tracking-wide text-stone-800 mb-8">
-          Contact Us
+          {t("contact.title")}
         </h2>
         <p className="text-lg text-stone-600 font-sans font-light leading-relaxed">
-          Get in touch to discuss your casting needs and creative projects.
+          {t("contact.description")}
         </p>
       </div>
     </section>

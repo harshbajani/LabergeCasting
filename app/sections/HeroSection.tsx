@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "~/contexts/LanguageContext";
 import SplitText from "../components/SplitText";
 import LiquidEther from "~/components/background/LiquidEther";
 import { colors1 } from "~/constants";
 
 export default function HeroSection(): React.JSX.Element {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
@@ -49,7 +53,8 @@ export default function HeroSection(): React.JSX.Element {
           {/* Main Headline */}
           <div className="mb-8">
             <SplitText
-              text="LABERGE CASTING"
+              key={`company-${currentLanguage}`}
+              text={t("hero.company")}
               tag="h1"
               className="text-6xl md:text-8xl lg:text-9xl font-display font-normal tracking-wider text-stone-800"
               delay={80}
@@ -65,7 +70,8 @@ export default function HeroSection(): React.JSX.Element {
           {/* Subtitle */}
           <div className="mb-12">
             <SplitText
-              text="Elevating talent through refined artistry"
+              key={`title-${currentLanguage}`}
+              text={t("hero.title")}
               tag="h2"
               className="text-xl md:text-2xl lg:text-3xl font-sans font-extralight tracking-wide text-stone-600 max-w-4xl mx-auto leading-relaxed"
               delay={40}
