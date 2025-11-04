@@ -1,8 +1,8 @@
 import type { Route } from "./+types/home";
 import HeroSection from "../sections/HeroSection";
 import Navbar from "../components/Navbar";
+import AboutSection from "../sections/AboutSection";
 import {
-  AboutSection,
   ServicesSection,
   PortfolioSection,
   TalentSection,
