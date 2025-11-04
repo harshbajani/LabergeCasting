@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import AnimatedRibbons from "~/components/AnimatedRibbons";
 
 export function AboutSection(): React.JSX.Element {
   const { t } = useTranslation();
@@ -22,8 +23,9 @@ export function ServicesSection(): React.JSX.Element {
   const { t } = useTranslation();
   
   return (
-    <section id="services" className="min-h-screen bg-white flex items-center justify-center">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+    <section id="services" className="relative min-h-screen bg-white flex items-center justify-center">
+      <AnimatedRibbons className="z-0" />
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-6xl font-display font-light tracking-wide text-stone-800 mb-8">
           {t("services.title")}
         </h2>
@@ -39,8 +41,9 @@ export function PortfolioSection(): React.JSX.Element {
   const { t } = useTranslation();
   
   return (
-    <section id="portfolio" className="min-h-screen bg-stone-100 flex items-center justify-center">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+    <section id="portfolio" className="relative min-h-screen bg-stone-100 flex items-center justify-center">
+      <AnimatedRibbons className="z-0" />
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-6xl font-display font-light tracking-wide text-stone-800 mb-8">
           {t("portfolio.title")}
         </h2>
@@ -56,8 +59,9 @@ export function TalentSection(): React.JSX.Element {
   const { t } = useTranslation();
   
   return (
-    <section id="talent" className="min-h-screen bg-stone-50 flex items-center justify-center">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+    <section id="talent" className="relative min-h-screen bg-stone-50 flex items-center justify-center">
+      <AnimatedRibbons className="z-0" />
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-6xl font-display font-light tracking-wide text-stone-800 mb-8">
           {t("talent.title")}
         </h2>
@@ -73,8 +77,9 @@ export function ContactSection(): React.JSX.Element {
   const { t } = useTranslation();
   
   return (
-    <section id="contact" className="min-h-screen bg-white flex items-center justify-center">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+    <section id="contact" className="relative min-h-screen bg-white flex items-center justify-center">
+      <AnimatedRibbons className="z-0" />
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-6xl font-display font-light tracking-wide text-stone-800 mb-8">
           {t("contact.title")}
         </h2>
