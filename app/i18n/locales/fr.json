@@ -1,11 +1,9 @@
 {
   "nav": {
     "home": "Accueil",
-    "about": "À Propos",
-    "services": "Services",
-    "portfolio": "Portfolio",
-    "talent": "Talents",
-    "contact": "Contact"
+    "ourApproach": "Notre Approche",
+    "realStories": "Vraies Histoires",
+    "tellYourStory": "Racontez Votre Histoire"
   },
   "hero": {
     "company": "LABERGE CASTING",
@@ -36,5 +34,88 @@
   "language": {
     "english": "English",
     "french": "Français"
+  },
+  "ourApproach": {
+    "title": "Notre Approche",
+    "confidential": {
+      "title": "100% Confidentiel",
+      "description": "Vos informations restent privées et ne sont jamais partagées sans votre consentement."
+    },
+    "allStories": {
+      "title": "Tous Types d'Histoires Acceptées",
+      "description": "Grande ou petite, drôle ou émouvante, chaque histoire et information compte."
+    },
+    "storiesCollected": {
+      "title": "100+ Histoires Collectées",
+      "description": "Tant de parcours uniques qui alimentent nos projets et nous inspirent chaque jour."
+    }
+  },
+  "realStories": {
+    "title": "Vraies Histoires",
+    "subtitle": "Qu'il s'agisse de votre travail, de votre famille, d'une expérience qui a changé votre vie, d'une passion profonde, d'un chemin inattendu, ou simplement de la beauté de la vie quotidienne, votre histoire pourrait résonner bien au-delà de ce que vous imaginez.",
+    "stories": {
+      "loveStory": {
+        "tag": "Une Histoire d'Amour Unique",
+        "quote": "Mon lien avec Jonas s'est épanoui à travers des échanges épistolaires : il était un jeune scout en Afrique, et moi, une scoute au Québec. Nous avons grandi, construit nos propres vies, eu des enfants, mais nous avons toujours gardé notre lien vivant à travers l'encre. Après avoir perdu nos conjoints, nos lettres sont devenues une promesse, et il a traversé l'océan pour être avec moi. Les années à ses côtés ont été les plus belles de ma vie. Jonas n'est plus maintenant, mais son amour vit encore dans chaque page de mon histoire.",
+        "author": "- Lyse Morency"
+      },
+      "resilience": {
+        "tag": "Une Histoire de Résilience",
+        "quote": "Le jour où on m'a dit que j'étais bipolaire, j'ai remercié le ciel que ce soit traitable. Je n'étais pas folle après tout... juste malade.",
+        "author": "- Louis Murray"
+      },
+      "stepmom": {
+        "tag": "Une Belle-Mère Qui Réécrit les Règles",
+        "quote": "Je suis en train de construire ma propre maison écologique dans une configuration familiale unique : moi, mon partenaire, ses trois enfants, la mère des enfants, et son partenaire. Une famille recomposée, réinventée et améliorée... et puis il y a le rôle de belle-mère dans tout ça. J'aimerais réécrire le récit autour de ce rôle souvent sous-estimé !",
+        "author": "- Abrielle Sirois-Cournoyer"
+      }
+    }
+  },
+  "tellYourStory": {
+    "title": "Racontez Votre Histoire",
+    "hook": "Et si c'était vous sur le plateau ?",
+    "whatInvolves": {
+      "title": "Qu'est-ce que le formulaire implique ?",
+      "description": "Si un projet qui correspond à votre profil se présente, nous vous enverrons les détails du casting par courriel. Vous pourrez alors décider si vous voulez ou non soumettre votre candidature. C'est entièrement votre choix."
+    },
+    "perks": {
+      "title": "Quels sont les avantages ?",
+      "description": "Donnez une voix à votre histoire, partagez vos connaissances, soutenez une cause qui vous tient à cœur, révélez un talent caché, ou même gagnez un peu d'argent."
+    },
+    "form": {
+      "name": "Nom Complet",
+      "email": "Adresse Courriel",
+      "phone": "Numéro de Téléphone",
+      "age": "Tranche d'Âge",
+      "location": "Localisation",
+      "story": "Racontez-Nous Votre Histoire",
+      "experience": "Expérience Antérieure en Jeu/Médias",
+      "availability": "Disponibilité",
+      "language": "Langue Préférée de Communication",
+      "submit": "Soumettre Votre Histoire",
+      "placeholders": {
+        "name": "Entrez votre nom complet",
+        "email": "votre.courriel@exemple.com",
+        "phone": "+1 (555) 123-4567",
+        "location": "Ville, Province/État",
+        "story": "Partagez votre histoire unique, expérience ou perspective...",
+        "experience": "Décrivez toute expérience antérieure en jeu, médias ou prise de parole en public (optionnel)",
+        "availability": "Quand êtes-vous généralement disponible ? (ex: fins de semaine, soirées, flexible)"
+      },
+      "ageRanges": {
+        "select": "Sélectionnez la tranche d'âge",
+        "18-25": "18-25",
+        "26-35": "26-35",
+        "36-45": "36-45",
+        "46-55": "46-55",
+        "56-65": "56-65",
+        "65+": "65+"
+      },
+      "languages": {
+        "select": "Sélectionnez la langue préférée",
+        "english": "Anglais",
+        "french": "Français"
+      }
+    }
   }
 }

@@ -35,6 +35,12 @@
   --font-sans: "PP Mori", "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-display: "Swear Display", "PP Mori", serif;
+  --color-ivore: #EFEFE8;
+  --color-pitch-black: #0C0B0B;
+  --color-sky: #91AFF9;
+  --color-royal-blue: #4268D3;
+  --color-banane: #F6EE52;
+  --color-orchid: #BB6BD9;
 }
 
 html,

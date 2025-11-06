@@ -1,11 +1,9 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About",
-    "services": "Services",
-    "portfolio": "Portfolio",
-    "talent": "Talent",
-    "contact": "Contact"
+    "ourApproach": "Our Approach",
+    "realStories": "Real Stories",
+    "tellYourStory": "Tell Your Story"
   },
   "hero": {
     "company": "LABERGE CASTING",
@@ -36,5 +34,88 @@
   "language": {
     "english": "English",
     "french": "Français"
+  },
+  "ourApproach": {
+    "title": "Our Approach",
+    "confidential": {
+      "title": "100% Confidential",
+      "description": "Your information remains private and is never shared without your consent."
+    },
+    "allStories": {
+      "title": "All Types of Stories Accepted",
+      "description": "Big or small, funny or moving, every story and bit of information matters."
+    },
+    "storiesCollected": {
+      "title": "100+ Stories Collected",
+      "description": "So many unique paths that fuel our projects and inspire us every day."
+    }
+  },
+  "realStories": {
+    "title": "Real Stories",
+    "subtitle": "Whether it's about your work, your family, a life-changing experience, a deep passion, an unexpected path, or simply the beauty of everyday life, your story could resonate far beyond what you imagine.",
+    "stories": {
+      "loveStory": {
+        "tag": "A Unique Love Story",
+        "quote": "My bond with Jonas blossomed through epistolary exchanges: he was a young scout in Africa, and I, a scout in Quebec. We grew up, built our own lives, had children, yet we always kept our bond alive through ink. After losing our spouses, our letters became a promise, and he crossed the ocean to be with me. The years by his side were the most beautiful of my life. Jonas is gone now, but his love still lives in every page of my story.",
+        "author": "- Lyse Morency"
+      },
+      "resilience": {
+        "tag": "A Story of Resilience",
+        "quote": "The day I was told I was bipolar, I thanked the heavens it was treatable. I wasn't crazy after all... just sick.",
+        "author": "- Louis Murray"
+      },
+      "stepmom": {
+        "tag": "A Stepmom Who Rewrites the Rules",
+        "quote": "I'm in the process of building my own eco-friendly home in a unique family setup: me, my partner, his three kids, the kids' mother, and her partner. A blended family, reinvented and upgraded... and then there's the stepmom role in all of this. I would love to rewrite the narrative around this often underestimated role!",
+        "author": "- Abrielle Sirois-Cournoyer"
+      }
+    }
+  },
+  "tellYourStory": {
+    "title": "Tell Your Story",
+    "hook": "What if you were the one on set?",
+    "whatInvolves": {
+      "title": "What does the form involve?",
+      "description": "If a project that matches your profile comes along, we'll email you the casting details. You can then decide whether or not you want to submit your candidacy. It's entirely up to you."
+    },
+    "perks": {
+      "title": "What are the perks?",
+      "description": "Give a voice to your story, share your knowledge, support a cause close to your heart, unlock a hidden talent, or even earn a bit of money."
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "age": "Age Range",
+      "location": "Location",
+      "story": "Tell Us Your Story",
+      "experience": "Previous Acting/Media Experience",
+      "availability": "Availability",
+      "language": "Preferred Language of Communication",
+      "submit": "Submit Your Story",
+      "placeholders": {
+        "name": "Enter your full name",
+        "email": "your.email@example.com",
+        "phone": "+1 (555) 123-4567",
+        "location": "City, Province/State",
+        "story": "Share your unique story, experience, or perspective...",
+        "experience": "Describe any previous experience in acting, media, or public speaking (optional)",
+        "availability": "When are you generally available? (e.g., weekends, evenings, flexible)"
+      },
+      "ageRanges": {
+        "select": "Select age range",
+        "18-25": "18-25",
+        "26-35": "26-35",
+        "36-45": "36-45",
+        "46-55": "46-55",
+        "56-65": "56-65",
+        "65+": "65+"
+      },
+      "languages": {
+        "select": "Select preferred language",
+        "english": "English",
+        "french": "French"
+      }
+    }
   }
 }

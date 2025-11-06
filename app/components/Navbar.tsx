@@ -16,11 +16,9 @@ export default function Navbar({
 
   const navItems = [
     { id: "home", label: t("nav.home") },
-    { id: "about", label: t("nav.about") },
-    { id: "services", label: t("nav.services") },
-    { id: "portfolio", label: t("nav.portfolio") },
-    { id: "talent", label: t("nav.talent") },
-    { id: "contact", label: t("nav.contact") },
+    { id: "our-approach", label: t("nav.ourApproach") },
+    { id: "real-stories", label: t("nav.realStories") },
+    { id: "tell-your-story", label: t("nav.tellYourStory") },
   ];
 
   useEffect(() => {

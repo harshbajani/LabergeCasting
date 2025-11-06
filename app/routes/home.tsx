@@ -1,14 +1,10 @@
 import type { Route } from "./+types/home";
 import HeroSection from "../sections/HeroSection";
 import Navbar from "../components/Navbar";
-import AboutSection from "../sections/AboutSection";
-import {
-  ServicesSection,
-  PortfolioSection,
-  TalentSection,
-  ContactSection,
-} from "../sections/PlaceholderSections";
 import ScrollSmoothProvider from "~/components/ScrollSmoothProvider";
+import OurApproachSection from "~/sections/OurApproach";
+import RealStoriesSection from "~/sections/RealStories";
+import TellYourStorySection from "~/sections/TellYourStory";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -31,11 +27,9 @@ export default function Home() {
       <Navbar />
       <ScrollSmoothProvider>
         <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <PortfolioSection />
-        <TalentSection />
-        <ContactSection />
+        <OurApproachSection />
+        <RealStoriesSection />
+        <TellYourStorySection />
       </ScrollSmoothProvider>
     </main>
   );
