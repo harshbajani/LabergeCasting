@@ -117,5 +117,16 @@
         "french": "Français"
       }
     }
+  },
+  "video": {
+    "title": "Vivez l'Excellence",
+    "subtitle": "Où les Histoires Prennent Vie",
+    "description": "Découvrez l'art et la passion qui animent notre excellence en casting à travers cette vitrine exclusive.",
+    "loading": "Chargement de l'Expérience...",
+    "accessibility": "Vidéo plein écran présentant le travail de Laberge Casting au Musée de la civilisation à Québec"
+  },
+  "common": {
+    "continue": "Continuer",
+    "scroll": "Défiler"
   }
 }

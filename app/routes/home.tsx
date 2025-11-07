@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import HeroSection from "../sections/HeroSection";
+import VideoSection from "../sections/VideoSection";
 import Navbar from "../components/Navbar";
 import ScrollSmoothProvider from "~/components/ScrollSmoothProvider";
 import OurApproachSection from "~/sections/OurApproach";
@@ -28,6 +29,7 @@ export default function Home() {
       <ScrollSmoothProvider>
         <HeroSection />
         <OurApproachSection />
+        <VideoSection />
         <RealStoriesSection />
         <TellYourStorySection />
       </ScrollSmoothProvider>

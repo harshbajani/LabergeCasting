@@ -117,5 +117,16 @@
         "french": "French"
       }
     }
+  },
+  "video": {
+    "title": "Experience Excellence",
+    "subtitle": "Where Stories Come to Life",
+    "description": "Witness the artistry and passion that drives our casting excellence through this exclusive showcase.",
+    "loading": "Loading Experience...",
+    "accessibility": "Full-screen video showcasing Laberge Casting's work at Musée de la civilisation in Quebec"
+  },
+  "common": {
+    "continue": "Continue",
+    "scroll": "Scroll"
   }
 }
