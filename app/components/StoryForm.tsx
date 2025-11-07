@@ -70,7 +70,9 @@ const StoryForm: React.FC = () => {
   }, []);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -103,7 +105,7 @@ const StoryForm: React.FC = () => {
     <div className="relative">
       {/* Spotlight effect */}
       <div className="absolute inset-0 bg-linear-to-br from-sky/5 via-orchid/5 to-banane/5 rounded-3xl blur-xl" />
-      
+
       <form
         ref={formRef}
         onSubmit={handleSubmit}
@@ -167,13 +169,27 @@ const StoryForm: React.FC = () => {
               onChange={handleInputChange}
               className="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-royal-blue focus:ring-2 focus:ring-royal-blue/20 transition-all duration-300 bg-white/80"
             >
-              <option value="">{t("tellYourStory.form.ageRanges.select")}</option>
-              <option value="18-25">{t("tellYourStory.form.ageRanges.18-25")}</option>
-              <option value="26-35">{t("tellYourStory.form.ageRanges.26-35")}</option>
-              <option value="36-45">{t("tellYourStory.form.ageRanges.36-45")}</option>
-              <option value="46-55">{t("tellYourStory.form.ageRanges.46-55")}</option>
-              <option value="56-65">{t("tellYourStory.form.ageRanges.56-65")}</option>
-              <option value="65+">{t("tellYourStory.form.ageRanges.65+")}</option>
+              <option value="">
+                {t("tellYourStory.form.ageRanges.select")}
+              </option>
+              <option value="18-25">
+                {t("tellYourStory.form.ageRanges.18-25")}
+              </option>
+              <option value="26-35">
+                {t("tellYourStory.form.ageRanges.26-35")}
+              </option>
+              <option value="36-45">
+                {t("tellYourStory.form.ageRanges.36-45")}
+              </option>
+              <option value="46-55">
+                {t("tellYourStory.form.ageRanges.46-55")}
+              </option>
+              <option value="56-65">
+                {t("tellYourStory.form.ageRanges.56-65")}
+              </option>
+              <option value="65+">
+                {t("tellYourStory.form.ageRanges.65+")}
+              </option>
             </select>
           </div>
 
@@ -250,9 +266,15 @@ const StoryForm: React.FC = () => {
               required
               className="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-royal-blue focus:ring-2 focus:ring-royal-blue/20 transition-all duration-300 bg-white/80"
             >
-              <option value="">{t("tellYourStory.form.languages.select")}</option>
-              <option value="english">{t("tellYourStory.form.languages.english")}</option>
-              <option value="french">{t("tellYourStory.form.languages.french")}</option>
+              <option value="">
+                {t("tellYourStory.form.languages.select")}
+              </option>
+              <option value="english">
+                {t("tellYourStory.form.languages.english")}
+              </option>
+              <option value="french">
+                {t("tellYourStory.form.languages.french")}
+              </option>
             </select>
           </div>
         </div>

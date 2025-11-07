@@ -16,7 +16,7 @@ const TellYourStorySection = () => {
   useEffect(() => {
     const hook = hookRef.current;
     const contentBlocks = contentBlocksRef.current;
-    
+
     if (hook) {
       gsap.fromTo(
         hook,
@@ -39,7 +39,7 @@ const TellYourStorySection = () => {
     }
 
     if (contentBlocks) {
-      const blocks = contentBlocks.querySelectorAll('.content-block');
+      const blocks = contentBlocks.querySelectorAll(".content-block");
       gsap.fromTo(
         blocks,
         {
@@ -92,7 +92,6 @@ const TellYourStorySection = () => {
             from={{ opacity: 0, y: 60, rotateX: -90 }}
             to={{ opacity: 1, y: 0, rotateX: 0 }}
           />
-          
           {/* Hook Question with ScrollReveal fade-up */}
           <p
             ref={hookRef}
@@ -103,7 +102,10 @@ const TellYourStorySection = () => {
         </div>
 
         {/* Content Blocks with Stagger */}
-        <div ref={contentBlocksRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div
+          ref={contentBlocksRef}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16"
+        >
           <div className="content-block">
             <h3 className="text-xl font-display font-medium text-pitch-black mb-4">
               {t("tellYourStory.whatInvolves.title")}
@@ -124,7 +126,16 @@ const TellYourStorySection = () => {
         </div>
 
         {/* Form Section with Slide-up Animation */}
-        <div className="max-w-4xl mx-auto">
+      </div>
+      <div className="w-full max-w-fit mx-auto grid grid-cols-2 gap-20">
+        <div className="flex items-center justify-center">
+          <img
+            src="/Tag lines/EveryoneHasAstory_1.png"
+            alt="tagline"
+            className="w-fit object-contain"
+          />
+        </div>
+        <div className="flex w-fit">
           <StoryForm />
         </div>
       </div>
