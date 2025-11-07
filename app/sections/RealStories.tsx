@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedRibbons from "~/components/AnimatedRibbons";
 import SplitText from "~/components/SplitText";
 import TestimonialCard from "~/components/TestimonialCard";
+import ScrollTriggerPkg from "gsap/ScrollTrigger";
+const ScrollTrigger = ScrollTriggerPkg;
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,10 +65,7 @@ const RealStoriesSection = () => {
   }, []);
 
   return (
-    <section
-      id="real-stories"
-      className="relative min-h-screen bg-white py-20"
-    >
+    <section id="real-stories" className="relative min-h-screen bg-white py-20">
       {/* Static Ribbons */}
       <AnimatedRibbons className="z-0" />
 
@@ -85,7 +83,7 @@ const RealStoriesSection = () => {
             from={{ opacity: 0, y: 60, rotateX: -90 }}
             to={{ opacity: 1, y: 0, rotateX: 0 }}
           />
-          
+
           {/* Subheadline with ScrollReveal fade-up */}
           <p
             ref={subheadingRef}

@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedRibbons from "~/components/AnimatedRibbons";
 import SplitText from "~/components/SplitText";
 import StoryForm from "~/components/StoryForm";
+import ScrollTriggerPkg from "gsap/ScrollTrigger";
+const ScrollTrigger = ScrollTriggerPkg;
 
 gsap.registerPlugin(ScrollTrigger);
 

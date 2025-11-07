@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Quote } from "lucide-react";
+import ScrollTriggerPkg from "gsap/ScrollTrigger";
+const ScrollTrigger = ScrollTriggerPkg;
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,29 +63,29 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
     >
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-linear-to-br from-orchid/5 via-sky/5 to-banane/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      
+
       {/* Decorative quote icon */}
       <div className="absolute top-6 right-6 text-orchid/20 group-hover:text-orchid/40 transition-colors duration-300">
         <Quote size={32} strokeWidth={1} />
       </div>
-      
+
       <div className="relative z-10">
         {/* Tag */}
         <div className="inline-block bg-royal-blue/10 text-royal-blue px-4 py-2 rounded-full text-sm font-medium mb-6 group-hover:bg-royal-blue/20 transition-colors duration-300">
           {tag}
         </div>
-        
+
         {/* Quote */}
         <blockquote className="text-stone-700 font-sans leading-relaxed mb-6 text-lg group-hover:text-stone-800 transition-colors duration-300">
           "{quote}"
         </blockquote>
-        
+
         {/* Author */}
         <cite className="text-stone-500 font-medium text-base not-italic group-hover:text-royal-blue transition-colors duration-300">
           {author}
         </cite>
       </div>
-      
+
       {/* Subtle border animation */}
       <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-orchid/20 transition-colors duration-500" />
     </div>

@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import ScrollTriggerPkg from "gsap/ScrollTrigger";
+const ScrollTrigger = ScrollTriggerPkg;
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,18 +63,18 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     >
       {/* Gradient overlay on hover */}
       <div className="absolute inset-0 bg-linear-to-br from-sky/5 to-royal-blue/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
+
       <div className="relative z-10">
         {/* Icon */}
         <div className="mb-6 text-royal-blue group-hover:text-sky transition-colors duration-300">
           {icon}
         </div>
-        
+
         {/* Title */}
         <h3 className="text-xl font-display font-medium text-pitch-black mb-4 group-hover:text-royal-blue transition-colors duration-300">
           {title}
         </h3>
-        
+
         {/* Description */}
         <p className="text-stone-600 font-sans leading-relaxed group-hover:text-stone-700 transition-colors duration-300">
           {description}

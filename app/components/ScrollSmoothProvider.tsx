@@ -1,10 +1,11 @@
 import { useLayoutEffect, useRef, type ReactNode } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollSmootherPkg from "gsap/ScrollSmoother";
 import { useGSAP } from "@gsap/react";
 import { setGlobalSmoother } from "../lib/utils";
-// Use default import for CommonJS module
-import ScrollSmootherPkg from "gsap/ScrollSmoother";
+import ScrollTriggerPkg from "gsap/ScrollTrigger";
+
+const ScrollTrigger = ScrollTriggerPkg;
 const ScrollSmoother = ScrollSmootherPkg;
 
 // Register GSAP plugins
@@ -13,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const ScrollSmoothProvider = ({ children }: { children: ReactNode }) => {
   const smoothWrapperRef = useRef<HTMLDivElement | null>(null);
   const smoothContentRef = useRef<HTMLDivElement | null>(null);
-  const smootherInstance = useRef<any>(null); // Use 'any' to avoid type issues
+  const smootherInstance = useRef<any>(null);
 
   useGSAP(() => {
     // Ensure DOM is ready

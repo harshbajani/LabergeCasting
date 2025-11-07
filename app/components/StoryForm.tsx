@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Send } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 import PhoneInput from "./PhoneInput";
+import ScrollTriggerPkg from "gsap/ScrollTrigger";
+const ScrollTrigger = ScrollTriggerPkg;
 
 gsap.registerPlugin(ScrollTrigger);
 
