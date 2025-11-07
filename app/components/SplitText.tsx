@@ -1,9 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { SplitText as GSAPSplitText } from "gsap/SplitText";
+import SplitTextPkg from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
 import ScrollTriggerPkg from "gsap/ScrollTrigger";
+
 const ScrollTrigger = ScrollTriggerPkg;
+const GSAPSplitText = SplitTextPkg;
 
 gsap.registerPlugin(ScrollTrigger, GSAPSplitText, useGSAP);
 
@@ -56,7 +58,7 @@ const SplitText: React.FC<SplitTextProps> = ({
     () => {
       if (!ref.current || !text || !fontsLoaded) return;
       const el = ref.current as HTMLElement & {
-        _rbsplitInstance?: GSAPSplitText;
+        _rbsplitInstance?: any; // Changed type to any
       };
 
       if (el._rbsplitInstance) {
@@ -78,15 +80,20 @@ const SplitText: React.FC<SplitTextProps> = ({
             : `+=${marginValue}${marginUnit}`;
       const start = `top ${startPct}%${sign}`;
       let targets: Element[] = [];
-      const assignTargets = (self: GSAPSplitText) => {
+      const assignTargets = (self: any) => {
+        if (splitType.includes("chars") && self.chars?.length)
+          targets = self.chars;
         if (
-          splitType.includes("chars") &&
-          (self as GSAPSplitText).chars?.length
+          !targets.length &&
+          splitType.includes("words") &&
+          self.words?.length
         )
-          targets = (self as GSAPSplitText).chars;
-        if (!targets.length && splitType.includes("words") && self.words.length)
           targets = self.words;
-        if (!targets.length && splitType.includes("lines") && self.lines.length)
+        if (
+          !targets.length &&
+          splitType.includes("lines") &&
+          self.lines?.length
+        )
           targets = self.lines;
         if (!targets.length) targets = self.chars || self.words || self.lines;
       };
@@ -98,7 +105,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         wordsClass: "split-word",
         charsClass: "split-char",
         reduceWhiteSpace: false,
-        onSplit: (self: GSAPSplitText) => {
+        onSplit: (self: any) => {
           assignTargets(self);
           return gsap.fromTo(
             targets,
@@ -127,7 +134,7 @@ const SplitText: React.FC<SplitTextProps> = ({
       });
       el._rbsplitInstance = splitInstance;
       return () => {
-        ScrollTrigger.getAll().forEach((st) => {
+        ScrollTrigger.getAll().forEach((st: any) => {
           if (st.trigger === el) st.kill();
         });
         try {
