@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { setGlobalSmoother } from "../lib/utils"; // Import the global setter
-import { ScrollSmoother } from "gsap/all";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);

@@ -1,5 +1,5 @@
 import { clsx, type ClassValue } from "clsx";
-import type { ScrollSmoother } from "gsap/all";
+import type { ScrollSmoother } from "gsap/ScrollSmoother";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
