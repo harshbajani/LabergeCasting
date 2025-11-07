@@ -2,8 +2,10 @@ import { useLayoutEffect, useRef, type ReactNode } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { setGlobalSmoother } from "../lib/utils"; // Import the global setter
-import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { setGlobalSmoother } from "../lib/utils";
+// Use default import for CommonJS module
+import ScrollSmootherPkg from "gsap/ScrollSmoother";
+const ScrollSmoother = ScrollSmootherPkg;
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -11,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const ScrollSmoothProvider = ({ children }: { children: ReactNode }) => {
   const smoothWrapperRef = useRef<HTMLDivElement | null>(null);
   const smoothContentRef = useRef<HTMLDivElement | null>(null);
-  const smootherInstance = useRef<ScrollSmoother | null>(null);
+  const smootherInstance = useRef<any>(null); // Use 'any' to avoid type issues
 
   useGSAP(() => {
     // Ensure DOM is ready
@@ -26,10 +28,10 @@ const ScrollSmoothProvider = ({ children }: { children: ReactNode }) => {
     smootherInstance.current = ScrollSmoother.create({
       wrapper: smoothWrapperRef.current,
       content: smoothContentRef.current,
-      smooth: 1.5, // Smooth scrolling intensity
-      effects: true, // Enable data-speed effects
-      smoothTouch: 0.1, // Smooth scrolling on touch devices (mobile)
-      normalizeScroll: true, // Normalizes scrolling across different devices
+      smooth: 1.5,
+      effects: true,
+      smoothTouch: 0.1,
+      normalizeScroll: true,
     });
 
     // Set global reference for other components to use
@@ -42,7 +44,7 @@ const ScrollSmoothProvider = ({ children }: { children: ReactNode }) => {
       if (smootherInstance.current) {
         smootherInstance.current.kill();
         smootherInstance.current = null;
-        setGlobalSmoother(null); // Clear global reference
+        setGlobalSmoother(null);
       }
     };
   }, []);
@@ -51,19 +53,14 @@ const ScrollSmoothProvider = ({ children }: { children: ReactNode }) => {
   useLayoutEffect(() => {
     const refreshSmoother = () => {
       if (smootherInstance.current) {
-        // Small delay to ensure DOM is updated
         setTimeout(() => {
-          // Guard again inside timeout
           smootherInstance.current?.refresh();
           ScrollTrigger.refresh();
         }, 100);
       }
     };
 
-    // Listen for popstate events (back/forward navigation)
     window.addEventListener("popstate", refreshSmoother);
-
-    // Also listen for hash changes
     window.addEventListener("hashchange", refreshSmoother);
 
     return () => {

@@ -1,5 +1,4 @@
 import { clsx, type ClassValue } from "clsx";
-import type { ScrollSmoother } from "gsap/ScrollSmoother";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
@@ -7,13 +6,13 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // Global reference to ScrollSmoother instance
-let globalSmoother: ScrollSmoother | null = null;
+let globalSmoother: any = null; // Use 'any' to avoid type complications
 
-export const setGlobalSmoother = (smoother: ScrollSmoother | null) => {
+export const setGlobalSmoother = (smoother: any) => {
   globalSmoother = smoother;
 };
 
-export const getGlobalSmoother = (): ScrollSmoother | null => {
+export const getGlobalSmoother = (): any => {
   return globalSmoother;
 };
 
@@ -23,7 +22,7 @@ export const scrollTo = (
   options: { offset?: number; duration?: number; easing?: string } = {}
 ) => {
   if (globalSmoother) {
-    globalSmoother.scrollTo(target as any, options as any);
+    globalSmoother.scrollTo(target, options);
   }
 };
 
